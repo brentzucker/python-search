@@ -20,15 +20,9 @@ json_obj = urllib2.urlopen(final_url)
 #Returns the JSON string as a python data structure (a list containing 3 lists (Page Title, Description, URL)
 json_data = json.load(json_obj)
 
-#Stores inner list as a list of Titles
-titles = json_data[1]
+#Stores inner list of titles, descriptions, and urls in a results dictionary
+results = {'title': json_data[1], 'description:': json_data[2], 'url':json_data[3]}
 
-#Stores inner list as a list of Descriptions
-descriptions = json_data[2]
-
-#Stores inner list as a list of URLs
-urls = json_data[3]
-
-for result in titles:
+for result in results['title']:
 	print result
 
