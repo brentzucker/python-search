@@ -14,18 +14,15 @@ form = cgi.FieldStorage()
 query = form.getvalue('search_bar')
 
 #for testing purposes
-print '<p>'+query+'</p>'
+print '<p> <b>You searched</b>: <i>'+query+'</i></p>'
 
 #query = "atlanta"
 
 #Calls combo search - stores search results in a list
 results = wikitweet.combo_search(query)
 
-#testing
-print results
-
-
 for r in results:
+	r = unicode(r).encode('utf8')
 	print '<p>'+r+'</p>'
 
 print '<p>done</p>'
