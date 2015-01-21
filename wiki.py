@@ -1,5 +1,8 @@
+#!/usr/bin/python
 import urllib2
 import json
+
+print "Content-type:text/html\r\n\r\n"
 
 max_results = 10
 action = 'opensearch'

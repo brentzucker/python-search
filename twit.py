@@ -1,4 +1,7 @@
+#!/usr/bin/python
 import tweepy
+
+print "Content-type:text/html\r\n\r\n"
 
 #returns tweets that match sepcified query 
 
